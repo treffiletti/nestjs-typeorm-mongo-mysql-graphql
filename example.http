@@ -19,15 +19,34 @@ content-type: application/json
 ###
 GET http://localhost:3000/users HTTP/1.1
 ###
-GET http://localhost:3000/users/4 HTTP/1.1
+GET http://localhost:3000/users/2fcb5aa0-9697-418a-9f66-b78d003fd822 HTTP/1.1
 ###
-# GET http://example/topics/1 HTTP/1.1
+# DELETE http://localhost:3000/users/2fcb5aa0-9697-418a-9f66-b78d003fd822 HTTP/1.1
 ###
 POST http://localhost:3000/users HTTP/1.1
 content-type: application/json
 
 {
-  "firstName": "Nicholas",
-  "lastName": "Tref",
-  "isActive": false
+  "firstName": "N",
+  "lastName": "Anthony",
+  "isActive": true
+}
+
+
+
+###
+GET http://localhost:3000/prescreens HTTP/1.1
+###
+GET http://localhost:3000/prescreens/62358093d64187406a1d45cb HTTP/1.1
+###
+# DELETE http://localhost:3000/prescreens/62357f6e8989309b97f7cabe HTTP/1.1
+###
+POST http://localhost:3000/prescreens HTTP/1.1
+content-type: application/json
+
+{ 
+  "userId": "5ceeea68-2012-4008-84c3-4148bbcb27d5",
+  "type": "prescreen",
+  "code": "Failure_8",
+  "status": true
 }

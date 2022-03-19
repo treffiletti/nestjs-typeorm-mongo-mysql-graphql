@@ -1,25 +1,29 @@
 import {
   Column,
   Entity,
-  PrimaryGeneratedColumn,
+  ObjectIdColumn,
+  ObjectID,
   CreateDateColumn,
   UpdateDateColumn,
 } from 'typeorm';
 // import { Timestamp } from 'src/timestamps/timestamp.entity';
 
 @Entity()
-export class User {
-  @PrimaryGeneratedColumn('uuid')
-  id: string;
+export class Prescreen {
+  @ObjectIdColumn()
+  id: ObjectID;
+
+  @Column('uuid')
+  userId: string;
 
   @Column()
-  firstName: string;
+  type: string;
 
   @Column()
-  lastName: string;
+  code: string;
 
   @Column({ default: true })
-  isActive: boolean;
+  status: boolean;
 
   @CreateDateColumn()
   createdDate: Date;
