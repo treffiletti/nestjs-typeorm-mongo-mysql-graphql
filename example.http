@@ -19,7 +19,7 @@ content-type: application/json
 ###
 GET http://localhost:3000/users HTTP/1.1
 ###
-GET http://localhost:3000/users/1 HTTP/1.1
+GET http://localhost:3000/users/4 HTTP/1.1
 ###
 # GET http://example/topics/1 HTTP/1.1
 ###
@@ -27,7 +27,7 @@ POST http://localhost:3000/users HTTP/1.1
 content-type: application/json
 
 {
-  "firstName": "Nick",
+  "firstName": "Nicholas",
   "lastName": "Tref",
   "isActive": false
 }
